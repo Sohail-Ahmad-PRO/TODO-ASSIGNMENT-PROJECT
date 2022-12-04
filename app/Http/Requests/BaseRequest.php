@@ -20,7 +20,7 @@ class BaseRequest extends FormRequest
      */
     protected function failedValidation(Validator $validator): void
     {
-        $response = new JsonResponse($validator->errors());
+        $response = new JsonResponse(['status_code' => 422, 'data' => $validator->errors()]);
 
         throw new ValidationException($validator, $response);
     }

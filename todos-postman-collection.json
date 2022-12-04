@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "26d89b05-3a14-4733-b587-b5a710226bb9",
+		"name": "TODO-ASSIGNMENT-PROJECT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10989425"
+	},
+	"item": [
+		{
+			"name": "TODOs",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDMxMzE1NjdkYjQ1NGQwZGNmY2Y4M2UwMTExMDM1ZDFkM2M4MjY2Zjg4NTRhYTZkZjBmZTgxYjAwODI2MTY2ZDAwMGRmZTIyMjY5ZTA5OTAiLCJpYXQiOjE2NzAxNTc0NTQuMDE3MiwibmJmIjoxNjcwMTU3NDU0LjAxNzIwMiwiZXhwIjoxNzAxNjkzNDU0LjAxMjI5MSwic3ViIjoiMSIsInNjb3BlcyI6W119.V0lEMzhlGWNthijjsj4R6PWH5KVntWfS0LjaV9RZOSAmRmC_f0RUUsujbDTqJli-0EJbbA2fxxtOcywUP178785aP69EaxD150hbcSO3nKpoWom2Q2zAZHoeLbxrIReSpl_qrkSK0mPA2jYcRSIXVFrVK6T4Bf6YUC_z1mcYRXBfagUllmwzE_TXKlRWMhZBqz4QkLZopCN5aY1dio6lGAItsYjJQ7Vs1Bi4pxAPRdlGNUwIe-Twe5-szqAl7cwH9xeeMQHcf6Cc2xOwlVttvDSoKEpx1cxhPtOIh4UFJ6yq4Kr6sDM6j_XJiXk2BtzRG5j8ItrGntsX1P1Wh_JqOWcBDrPWZ4s6vgcljYGzOL5vYZvCPDppWJLuBF6ErI-tk70oEAvDvGlNwZ2AA-OTKgat0wuh8L1gQUF6uAiWhxLdIMtvLHukK9MZtMCHUFSEg7yEcBRtjkBPaUwHjO5AWUFxRjv4GBxibxsjwPf07iAT_qEJXqAcE-abnvhqbNZo8M7PB5rWSJVjCCRKmPI5q_ByYMo7kaL30jxStm463MGF1LK4l8tXmSd-i9nmlN1JHpCMJAy8lbvUqsmFJ7DDlDib8MckZVcCama6jMXtSNNkdt8s0NlnwxrwXJyI9fDKsP-7YCjM-vtrMpDfXJzh4f_BK6K8iotu9zMOGX-L58A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Make a coffee\",\n    \"description\": \"Will make a lattee coffee after waking up in the morning.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDMxMzE1NjdkYjQ1NGQwZGNmY2Y4M2UwMTExMDM1ZDFkM2M4MjY2Zjg4NTRhYTZkZjBmZTgxYjAwODI2MTY2ZDAwMGRmZTIyMjY5ZTA5OTAiLCJpYXQiOjE2NzAxNTc0NTQuMDE3MiwibmJmIjoxNjcwMTU3NDU0LjAxNzIwMiwiZXhwIjoxNzAxNjkzNDU0LjAxMjI5MSwic3ViIjoiMSIsInNjb3BlcyI6W119.V0lEMzhlGWNthijjsj4R6PWH5KVntWfS0LjaV9RZOSAmRmC_f0RUUsujbDTqJli-0EJbbA2fxxtOcywUP178785aP69EaxD150hbcSO3nKpoWom2Q2zAZHoeLbxrIReSpl_qrkSK0mPA2jYcRSIXVFrVK6T4Bf6YUC_z1mcYRXBfagUllmwzE_TXKlRWMhZBqz4QkLZopCN5aY1dio6lGAItsYjJQ7Vs1Bi4pxAPRdlGNUwIe-Twe5-szqAl7cwH9xeeMQHcf6Cc2xOwlVttvDSoKEpx1cxhPtOIh4UFJ6yq4Kr6sDM6j_XJiXk2BtzRG5j8ItrGntsX1P1Wh_JqOWcBDrPWZ4s6vgcljYGzOL5vYZvCPDppWJLuBF6ErI-tk70oEAvDvGlNwZ2AA-OTKgat0wuh8L1gQUF6uAiWhxLdIMtvLHukK9MZtMCHUFSEg7yEcBRtjkBPaUwHjO5AWUFxRjv4GBxibxsjwPf07iAT_qEJXqAcE-abnvhqbNZo8M7PB5rWSJVjCCRKmPI5q_ByYMo7kaL30jxStm463MGF1LK4l8tXmSd-i9nmlN1JHpCMJAy8lbvUqsmFJ7DDlDib8MckZVcCama6jMXtSNNkdt8s0NlnwxrwXJyI9fDKsP-7YCjM-vtrMpDfXJzh4f_BK6K8iotu9zMOGX-L58A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Make a tea.\",\n    \"description\": \"Will make a tea in the morning..\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todos/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDMxMzE1NjdkYjQ1NGQwZGNmY2Y4M2UwMTExMDM1ZDFkM2M4MjY2Zjg4NTRhYTZkZjBmZTgxYjAwODI2MTY2ZDAwMGRmZTIyMjY5ZTA5OTAiLCJpYXQiOjE2NzAxNTc0NTQuMDE3MiwibmJmIjoxNjcwMTU3NDU0LjAxNzIwMiwiZXhwIjoxNzAxNjkzNDU0LjAxMjI5MSwic3ViIjoiMSIsInNjb3BlcyI6W119.V0lEMzhlGWNthijjsj4R6PWH5KVntWfS0LjaV9RZOSAmRmC_f0RUUsujbDTqJli-0EJbbA2fxxtOcywUP178785aP69EaxD150hbcSO3nKpoWom2Q2zAZHoeLbxrIReSpl_qrkSK0mPA2jYcRSIXVFrVK6T4Bf6YUC_z1mcYRXBfagUllmwzE_TXKlRWMhZBqz4QkLZopCN5aY1dio6lGAItsYjJQ7Vs1Bi4pxAPRdlGNUwIe-Twe5-szqAl7cwH9xeeMQHcf6Cc2xOwlVttvDSoKEpx1cxhPtOIh4UFJ6yq4Kr6sDM6j_XJiXk2BtzRG5j8ItrGntsX1P1Wh_JqOWcBDrPWZ4s6vgcljYGzOL5vYZvCPDppWJLuBF6ErI-tk70oEAvDvGlNwZ2AA-OTKgat0wuh8L1gQUF6uAiWhxLdIMtvLHukK9MZtMCHUFSEg7yEcBRtjkBPaUwHjO5AWUFxRjv4GBxibxsjwPf07iAT_qEJXqAcE-abnvhqbNZo8M7PB5rWSJVjCCRKmPI5q_ByYMo7kaL30jxStm463MGF1LK4l8tXmSd-i9nmlN1JHpCMJAy8lbvUqsmFJ7DDlDib8MckZVcCama6jMXtSNNkdt8s0NlnwxrwXJyI9fDKsP-7YCjM-vtrMpDfXJzh4f_BK6K8iotu9zMOGX-L58A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todos/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDMxMzE1NjdkYjQ1NGQwZGNmY2Y4M2UwMTExMDM1ZDFkM2M4MjY2Zjg4NTRhYTZkZjBmZTgxYjAwODI2MTY2ZDAwMGRmZTIyMjY5ZTA5OTAiLCJpYXQiOjE2NzAxNTc0NTQuMDE3MiwibmJmIjoxNjcwMTU3NDU0LjAxNzIwMiwiZXhwIjoxNzAxNjkzNDU0LjAxMjI5MSwic3ViIjoiMSIsInNjb3BlcyI6W119.V0lEMzhlGWNthijjsj4R6PWH5KVntWfS0LjaV9RZOSAmRmC_f0RUUsujbDTqJli-0EJbbA2fxxtOcywUP178785aP69EaxD150hbcSO3nKpoWom2Q2zAZHoeLbxrIReSpl_qrkSK0mPA2jYcRSIXVFrVK6T4Bf6YUC_z1mcYRXBfagUllmwzE_TXKlRWMhZBqz4QkLZopCN5aY1dio6lGAItsYjJQ7Vs1Bi4pxAPRdlGNUwIe-Twe5-szqAl7cwH9xeeMQHcf6Cc2xOwlVttvDSoKEpx1cxhPtOIh4UFJ6yq4Kr6sDM6j_XJiXk2BtzRG5j8ItrGntsX1P1Wh_JqOWcBDrPWZ4s6vgcljYGzOL5vYZvCPDppWJLuBF6ErI-tk70oEAvDvGlNwZ2AA-OTKgat0wuh8L1gQUF6uAiWhxLdIMtvLHukK9MZtMCHUFSEg7yEcBRtjkBPaUwHjO5AWUFxRjv4GBxibxsjwPf07iAT_qEJXqAcE-abnvhqbNZo8M7PB5rWSJVjCCRKmPI5q_ByYMo7kaL30jxStm463MGF1LK4l8tXmSd-i9nmlN1JHpCMJAy8lbvUqsmFJ7DDlDib8MckZVcCama6jMXtSNNkdt8s0NlnwxrwXJyI9fDKsP-7YCjM-vtrMpDfXJzh4f_BK6K8iotu9zMOGX-L58A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todos/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDMxMzE1NjdkYjQ1NGQwZGNmY2Y4M2UwMTExMDM1ZDFkM2M4MjY2Zjg4NTRhYTZkZjBmZTgxYjAwODI2MTY2ZDAwMGRmZTIyMjY5ZTA5OTAiLCJpYXQiOjE2NzAxNTc0NTQuMDE3MiwibmJmIjoxNjcwMTU3NDU0LjAxNzIwMiwiZXhwIjoxNzAxNjkzNDU0LjAxMjI5MSwic3ViIjoiMSIsInNjb3BlcyI6W119.V0lEMzhlGWNthijjsj4R6PWH5KVntWfS0LjaV9RZOSAmRmC_f0RUUsujbDTqJli-0EJbbA2fxxtOcywUP178785aP69EaxD150hbcSO3nKpoWom2Q2zAZHoeLbxrIReSpl_qrkSK0mPA2jYcRSIXVFrVK6T4Bf6YUC_z1mcYRXBfagUllmwzE_TXKlRWMhZBqz4QkLZopCN5aY1dio6lGAItsYjJQ7Vs1Bi4pxAPRdlGNUwIe-Twe5-szqAl7cwH9xeeMQHcf6Cc2xOwlVttvDSoKEpx1cxhPtOIh4UFJ6yq4Kr6sDM6j_XJiXk2BtzRG5j8ItrGntsX1P1Wh_JqOWcBDrPWZ4s6vgcljYGzOL5vYZvCPDppWJLuBF6ErI-tk70oEAvDvGlNwZ2AA-OTKgat0wuh8L1gQUF6uAiWhxLdIMtvLHukK9MZtMCHUFSEg7yEcBRtjkBPaUwHjO5AWUFxRjv4GBxibxsjwPf07iAT_qEJXqAcE-abnvhqbNZo8M7PB5rWSJVjCCRKmPI5q_ByYMo7kaL30jxStm463MGF1LK4l8tXmSd-i9nmlN1JHpCMJAy8lbvUqsmFJ7DDlDib8MckZVcCama6jMXtSNNkdt8s0NlnwxrwXJyI9fDKsP-7YCjM-vtrMpDfXJzh4f_BK6K8iotu9zMOGX-L58A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "sohail.ahmad11121@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "testing123",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "testing123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Email Verification",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/email/verify/1?expires=1670158545&hash=5e9c1513b1ee809e9be8f1d5c43608a2dae6e09b&signature=63565331a51d485b99348314c10ac89b410852047bb1f9fa379e9b6fa8124697",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"email",
+						"verify",
+						"1"
+					],
+					"query": [
+						{
+							"key": "expires",
+							"value": "1670158545"
+						},
+						{
+							"key": "hash",
+							"value": "5e9c1513b1ee809e9be8f1d5c43608a2dae6e09b"
+						},
+						{
+							"key": "signature",
+							"value": "63565331a51d485b99348314c10ac89b410852047bb1f9fa379e9b6fa8124697"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"sohail.ahmad11121@gmail.com\",\n    \"password\" : \"testing123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjNjNGM1ZGM2N2JjYmZiNDU4ZWE3ZmM4NDRmYTBiZGVmNzFmYjFkMDYyYjg5YWQyYTRjYzg1MGRhOTg0YTJiN2FiZmY1ZDI3NzU4N2NhY2QiLCJpYXQiOjE2NzAxNTUwOTYuNzAwNjEyLCJuYmYiOjE2NzAxNTUwOTYuNzAwNjEzLCJleHAiOjE3MDE2OTEwOTYuNjk1NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Pika5YcrmWpx-wb1EaLMiczf8swS-fkrMBubinwvUJozPU43xqJfczNVPZewdy2F6obMo74OkaCpcW6v5UH43Vlz5ugrjn8Ioy0puMGZx9aaxZhV4w377bUaPNmaSgUkpeaJwtnQFuvmNJ9Dad35ZvC1_dDpIfmoWG2onq3vqJIxVnVWOmyCva-zSowNzaRm3euynhkAVlmtU8HPQEXn8GRifEY64Tqmiun84zuH6_UdOTOFstn_HwoHNBtiCQrPZPBZw72m6wYhoEUBTEnVfDSKoqL_OELGSoL1xP7xIJwlLebo17H21RXpEo4j7muQVOfasfz5DxiNw3o_mPUNoup7gS8fJ9eeeui0CTnv2U7_PvISVKZrswdrmiKa_Mk0mzrHitYZecZShQ9FYPHkImZF_7zpzaXPLOSSaBBskBrHjRePG7hv012aaD-FroxnTJFO6o_nwuBN9kHFrS-ZLF9Vj_mLD7L4lk5eXcEileQUtzeFSYW21mrnfl2mIjKX5Z8MBhpzJI3-HHw1MaVpUWSqwwlJuicJU_LT4EY-UMe_HYZP1a-27F6o4T6EL1EUg1q8q1YMxCRGxO1W_T9G2LA24RJgfQmJtOI8cNtdb5j2h_IrUMcCJBkWswXNv1VGyTfwy75obIEvGAFKw_hm4t5apisO7yjAL8etxBL_IJs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer e3599c5a853eba576158164b041e356b62a1a0f8ef67a47458863cb3bbf1f9a0",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

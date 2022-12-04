@@ -24,14 +24,4 @@ class VerificationController extends Controller
 
         return response()->json(['message' => 'Email has been verified.', 'access_token' => $user->createToken('authToken')->accessToken]);
     }
-
-    public function resend(): JsonResponse
-    {
-        if (auth()->user()->hasVerifiedEmail()) {
-            return response()->json(['message' => 'Email already verified.'], 400);
-        }
-        auth()->user()->sendEmailVerificationNotification();
-
-        return response()->json(['message' => 'Email verification link sent on your email id']);
-    }
 }
