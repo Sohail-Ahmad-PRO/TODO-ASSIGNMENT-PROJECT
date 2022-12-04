@@ -33,7 +33,7 @@ class TodoController extends BaseController
      */
     public function index(): JsonResponse
     {
-        return $this->jsonResponse($this->service->list());
+        return $this->jsonResponse($this->service->list(request()->get('title') ?? ''));
     }
 
     /**

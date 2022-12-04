@@ -24,11 +24,12 @@ class TodoRepository
     }
 
     /**
+     * @param string $title
      * @return mixed
      */
-    public function list(): mixed
+    public function list(string $title): mixed
     {
-        return $this->model->paginate(10);
+        return $this->model->where('title', 'LIKE', '%' . $title . '%')->paginate(10);
     }
 
     /**

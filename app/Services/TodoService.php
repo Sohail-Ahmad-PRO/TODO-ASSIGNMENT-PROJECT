@@ -24,11 +24,12 @@ class TodoService
     }
 
     /**
+     * @param string $title
      * @return mixed
      */
-    public function list(): mixed
+    public function list(string $title): mixed
     {
-        return $this->repository->list();
+        return $this->repository->list($title);
     }
 
     /**

@@ -178,7 +178,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/todos",
+							"raw": "http://127.0.0.1:8000/api/todos?title=tea",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -190,6 +190,12 @@
 							"path": [
 								"api",
 								"todos"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "tea"
+								}
 							]
 						}
 					},
